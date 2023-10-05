@@ -22,12 +22,12 @@ jobs:
 
       - name: Generate API Documentation
         run: |
-          sphinx-apidoc -o source/ -f -M -d 10 ehub-backend-api-docs.json
-          sphinx-apidoc -o source/ -f -M -d 10 sender-backend-api-docs.json
+          sphinx-apidoc -o doc/ -f -M -d 10 doc/ehub-backend/api-docs/ehub-backend-api-docs.json
+         sphinx-apidoc -o doc/ -f -M -d 10 doc/sender-backend/api-docs/sender-backend-api-docs.json
 
       - name: Sphinx build
         run: |
-          sphinx-build source/ _build
+          sphinx-build doc/ _build
 
       - name: Deploy to GitHub Pages
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
