@@ -17,8 +17,6 @@ release = '0.1'
 extensions = ['myst_parser','sphinxcontrib.openapi']
 openapi_spec_path = ['doc/ehub-backend/api-docs/ehub-backend-api-docs.json','doc/sender-backend/api-docs/sender-backend-api-docs.json']
 
-.. openapi:: doc/ehub-backend/api-docs/ehub-backend-api-docs.json
-
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
