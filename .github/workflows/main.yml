@@ -19,11 +19,12 @@ jobs:
         run: |
           pip install sphinx sphinx_rtd_theme myst-parser sphinxcontrib.openapi
 
-
       - name: Generate API Documentation
         run: |
-          sphinx-apidoc -o doc/ -f -M -d 10 doc/ehub-backend/api-docs/ehub-backend-api-docs.json
-         sphinx-apidoc -o doc/ -f -M -d 10 doc/sender-backend/api-docs/sender-backend-api-docs.json
+          # Generate documentation for ehub-backend-api-docs.json
+          sphinx-apidoc -o doc/ -f -M -d 10 doc/ehub-backend/api-docs/
+          # Generate documentation for sender-backend-api-docs.json
+          sphinx-apidoc -o doc/ -f -M -d 10 doc/sender-backend/api-docs/
 
       - name: Sphinx build
         run: |
