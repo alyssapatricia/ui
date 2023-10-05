@@ -22,9 +22,9 @@ jobs:
       - name: Generate API Documentation
         run: |
           # Generate documentation for ehub-backend-api-docs.json
-          sphinx-apidoc -o doc/ -f -M -d 10 doc/ehub-backend/api-docs/
+          sphinx-apidoc -o doc/ehub-backend/api-docs/ -f -M -d 10 doc/ehub-backend/api-docs/
           # Generate documentation for sender-backend-api-docs.json
-          sphinx-apidoc -o doc/ -f -M -d 10 doc/sender-backend/api-docs/
+          sphinx-apidoc -o doc/ehub-backend/api-docs/ -f -M -d 10 doc/sender-backend/api-docs/
 
       - name: Sphinx build
         run: |
