@@ -4,11 +4,11 @@ UPRI EarthquakeHub Documentation Configuration
 Welcome to the UPRI EarthquakeHub Documentation Configuration! This document will provide you with the necessary steps to access and navigate the project's documentation, including instructions for downloading dependencies required for Sphinx, our chosen documentation generator.
 
 
-### Table of Contents
+## Table of Contents
 
 1. Introduction
-2. Setting Up Sphinx
-3. Accessing the Documentation
+2. Accessing the Documentation
+3. File Directory
 4. Deploying on GitHub Pages
 5. Contributing
 6. Feedback and Support
@@ -17,34 +17,6 @@ Welcome to the UPRI EarthquakeHub Documentation Configuration! This document wil
 ### Introduction
 
 The [UPRI EarthquakeHub](https://upri-earthquake.github.io/) contains all the information you need to understand and work with our project. We use Sphinx to generate and maintain this documentation, and the following sections will guide you through the process of accessing it.
-
-### Setting Up Sphinx
-Sphinx is used to generate our project's documentation. To set up Sphinx and generate the documentation locally, you need to follow these steps:
-
-1. **Install Python:** If you don't already have Python installed on your system, you can download it from [python.org](https://www.python.org/)
-2. **Install Sphinx:** Use pip, the Python package manager, to install Sphinx. Run the following command in your terminal:
-```
-pip install sphinx
-
-```
-3.  **Download Additional Dependencies**
-
-    This project require specific Sphinx extensions listed below:
-    1. ```myst_partser``` to parse our .md to Sphinx compatible file format which is .rst. More information [here](https://pypi.org/project/myst-parser/)
-
-    ```
-    pip install myst-parser
-    ```
-    2. ```sphinxcontrib.openapi``` used for generating documentation from OpenAPI specifications. More information [here](https://pypi.org/project/sphinxcontrib-openapi/)
-
-    ```
-    pip install sphinxcontrib.openapi
-    ```
-    3.  ```sphinx_rtd_theme``` used as the main theme of the documenation.  More information [here](https://pypi.org/project/sphinx-rtd-theme/)
-
-    ```
-    pip install sphinx_rtd_theme
-    ```
 
 ### Accessing the Documentation
 To access the project documentation, follow these steps:
@@ -71,9 +43,37 @@ cd repository/doc
 
 4. **Open the Documentation:** Depending on the format, you can access the documentation using a web browser for HTML-based documentation, or a text editor for Markdown, RST or other text-based formats.
 
+### File Directory
+The content of the documentation are written in different files. These files are deployed in the ```index.rst``` file. Should you wish to modify the content, follow the steps below:
+1. Refer to the [Contributing Guide]() before making any changes.
+2.  Identify which part of the documentation you want to edit. You may find these files in the ```doc``` folder. You may use any text editor to configure the files. Refer to the list of Markdown files and their corresponding topics:
+
+** Tutorial**
+- ```connect-to-rshake.md``` - How to Connect to Your Raspberry Shake via SSH
+- ```installing-rshake-client.md``` - Installing EarthquakeHub Client on Raspberry Shake
+- ```sending-data-to-ehub-network``` - Sending Data to EarthquakeHub Network
+- ```fdsnws.md```How to Use FDSNWS to Download Ground Motion Data and Metadata
+- ```intro-to-seiscomp.md``` - Introduction To SeisComp
+- ```dev-guide-contributing.md``` - Developer Guide: Contributing
+- ```docker-cheatsheet``` - Developer Guide: Docker Cheatsheet
+
+**Documentation**
+
+- ```system-overview.md``` - System Overview
+- ```ehub-commons.md``` - earthquake-hub-commons
+- ehub-backend/```overview.md``` -  earthquake-hub-backend
+        ***API Docs***
+    - ehub-backend/api-docs/ ```index.rst```
+- sender-backend/```overview.md``` - sender-backend
+      ***API Docs***
+    - sender-backend/api-docs/ ```index.rst```
+- ```ringserver.md``` - RingServer
+- ```skink2dali.md```- Slink2Dali
 
 
-## Deploying on GitHub Pages
+
+
+### Deploying on GitHub Pages
 To deploy your documentation on GitHub Pages, follow these steps:
 
 1. Configure GitHub Pages: In your Forked GitHub repository, go to the "Settings" tab and scroll down to the "GitHub Pages" section. Set the source branch to "gh-pages" and the "docs" folder. Save the changes.
